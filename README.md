@@ -1,2 +1,2 @@
-# technobrainz
-my site for web development
+# Techno Brainz
+My site for Web Development
