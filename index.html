@@ -142,38 +142,39 @@
 <!---End Team--->
 
 <!---Contact--->
-<form name="submit-to-google-sheet">
-    <table width="100%" bgcolor="black">
-        <tr>
-            <td>
-                <br><br><br>
-                <table border="0" width="50%" align="center" cellpadding="15">
-                    <tr align="center">
-                        <td colspan="2">
-                            <font color="#fff" size="6">Contact Us</font><br>
-                            <hr align="center" width="10%">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><font color="#fff" size="4">Name:</font></td>
-                        <td><input type="text" name="name" required></td>
-                    </tr>
-                    <tr>
-                        <td><font color="#fff" size="4">Mobile:</font></td>
-                        <td><input type="number" name="mobile" required></td>
-                    </tr>
-                    <tr>
-                        <td><font color="#fff" size="4">Message:</font></td>
-                        <td><textarea name="message" cols="20" rows="4" required></textarea></td>
-                    </tr>
-                    <tr align="center">
-                        <td colspan="2"><input type="submit" value="Submit"></td>
-                    </tr>
-                </table>
-                <br><br>
-            </td>
-        </tr>
-    </table>
+<form>
+
+<table width="100%"bbgcolor="black">
+<tr><td>
+<br><br><br>
+<table border="0"width="50%"align="center"cellpadding="15">
+<tr align="center">
+<td colspan="2"><font color="#black"size="6">Contact Us</font><br><hr align="center"width="10%"></td>
+</tr>
+<tr>
+<td><font color="black"size="4">Name :</font></td>
+<td><input type="text"</td>
+</tr>
+
+<tr>
+<td><font color="black"size="4">Mobile :</font></td>
+<td><input type="number"</td>
+</tr>
+
+<tr>
+<td><font color="black"size="4">Message :</font></td>
+<td><textarea cols="20"rows="4"></textarea></td>
+</tr>
+
+<tr align="center">
+<td colspan="2"><input type="Submit"></td>
+</tr>
+</table><br><br>
+
+
+</td></tr>
+</table>
+<br><br><br>
 </form>
 
 <!---End Contact--->
@@ -219,29 +220,6 @@
 
 </td></tr>
 </table>
-
-
-
-
-<!---End Footer--->
-<script>
-    const scriptURL = https://script.google.com/macros/s/AKfycbwLvQBRGlT2J1oW6WEYvCIe97ROV6-am_XncuItdHz0OzM-O275j6FMIi-NaEMVUuz75g/exec;
-    const form = document.forms['submit-to-google-sheet'];
-
-    form.addEventListener('submit', e => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                alert('Success! Your message has been sent.');
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('Error! Please try again.');
-            });
-    });
-</script>
-
 
 </body>
 </html>
