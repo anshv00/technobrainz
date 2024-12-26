@@ -35,7 +35,7 @@
           <font size="4">I am an IT Trainer,Web Developer by Profession & Trainer by Passion. I have been educating Web Development, Digital Marketing and Languges.</font>  
 
 <hr>
-<a href="htmlp/cv.jpg"><button>Download CV</button></a>
+<a href="file:///C:/Users/Dutta/Desktop/cv.pdf"><button>Download CV</button></a>
 <a href="#"><botton>Hire Me</button></a>
 
 </td> 
@@ -225,7 +225,17 @@
 
 
 <!---End Footer--->
+<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbxm6sVqMclmmJmeU9TPeortZAqc0kihn2qcyKbbzrRCVSBMBRZzMMhSNg3PDyn13Gn35A/exec>'
+  const form = document.forms['submit-to-google-sheet']
 
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
 </body>
 </html>
